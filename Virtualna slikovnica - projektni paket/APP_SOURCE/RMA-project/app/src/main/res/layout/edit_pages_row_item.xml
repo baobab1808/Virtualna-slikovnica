@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardViewPage"
+        android:layout_gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        card_view:cardCornerRadius="4dp"
+        android:layout_margin="20dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/imageViewSinglePage"
+                android:scaleType="centerCrop"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_centerInParent="true"
+                android:layout_alignParentTop="true"
+                android:layout_margin="10dp"/>
+
+            <TextView
+                android:id="@+id/textViewCaptionWord"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/imageViewSinglePage"
+                android:text="@string/caption"
+                android:textAllCaps="true"
+                android:textColor="#6a1b76"
+                android:textSize="20dp"
+                android:textStyle="normal|bold" />
+
+            <EditText
+                android:id="@+id/editTextCaption"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textViewCaptionWord"
+                android:inputType="textCapSentences" />
+
+            <TextView
+                android:id="@+id/textViewPageNumber"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/editTextCaption"
+                android:text="Page number:"
+                android:textAllCaps="true"
+                android:textColor="#6a1b76"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+
+            <RadioGroup
+                android:id="@+id/radioGroupPages"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textViewPageNumber"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/radio_button_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="1"
+                    android:textColor="#6a1b76"
+                    android:textColorHighlight="#b74bc2"
+                    android:textColorHint="#b74bc2"
+                    android:textColorLink="#b74bc2"
+                    android:textStyle="bold"
+                    card_view:buttonTint="#b74bc2" />
+
+                <RadioButton
+                    android:id="@+id/radio_button_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="2"
+                    android:textColor="#6a1b76"
+                    android:textStyle="bold"
+                    card_view:buttonTint="#b74bc2" />
+
+                <RadioButton
+                    android:id="@+id/radio_button_3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="3"
+                    android:textColor="#6a1b76"
+                    android:textStyle="bold"
+                    card_view:buttonTint="#b74bc2" />
+
+                <RadioButton
+                    android:id="@+id/radio_button_4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="4"
+                    android:textColor="#6a1b76"
+                    android:textStyle="bold"
+                    card_view:buttonTint="#b74bc2" />
+
+                <RadioButton
+                    android:id="@+id/radio_button_5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="5"
+                    android:textColor="#6a1b76"
+                    android:textStyle="bold"
+                    card_view:buttonTint="#b74bc2" />
+
+            </RadioGroup>
+
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>

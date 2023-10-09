@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".user_profile.Login"
+    android:gravity="center"
+    android:padding="70dp">
+
+    <EditText
+        android:id="@+id/editTextUsername"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:autofillHints="@string/e_mail"
+        android:hint="@string/e_mail"
+        android:inputType="textEmailAddress" />
+
+    <EditText
+        android:id="@+id/editTextPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/editTextUsername"
+        android:layout_marginBottom="10dp"
+        android:autofillHints="@string/password"
+        android:hint="@string/password"
+        android:inputType="textPassword" />
+
+    <Button
+        android:id="@+id/buttonConfirm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/editTextPassword"
+        android:layout_alignEnd="@+id/editTextPassword"
+        android:layout_alignRight="@+id/editTextPassword"
+        android:fontFamily="@font/vast_shadow"
+        android:text="@string/sign_in"
+        android:textColor="#6a1b76"
+        android:textStyle="bold"
+        app:backgroundTint="#fee157"
+        app:cornerRadius="10dp" />
+
+    <Button
+        android:id="@+id/buttonRedirectToRegister"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/buttonConfirm"
+        android:fontFamily="@font/vast_shadow"
+        android:text="@string/not_a_member_sign_up"
+        android:textColor="#6a1b76"
+        android:textSize="10sp"
+        app:backgroundTint="#FFFFFF"
+        app:cornerRadius="10dp" />
+
+    <Button
+        android:id="@+id/buttonPasswordReset"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/buttonRedirectToRegister"
+        android:fontFamily="@font/vast_shadow"
+        android:text="@string/forgot_your_password"
+        android:textColor="#6a1b76"
+        android:textSize="10sp"
+        app:backgroundTint="#FFFFFF"
+        app:cornerRadius="10dp" />
+
+</RelativeLayout>

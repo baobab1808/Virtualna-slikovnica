@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    tools:context=".showreviews.ShowReviews">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:id="@+id/reviewRl">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:fontFamily="@font/vast_shadow"
+            android:text=" Picturebook reviews"
+            android:textColor="#6a1b76"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:padding="10dp">
+
+        <ImageView
+            android:id="@+id/coverPicture"
+            android:layout_below="@+id/reviewRl"
+            android:layout_centerHorizontal="true"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@drawable/ic_baseline_menu_book_24"
+            android:foreground="@drawable/rounded_frame"
+            android:layout_gravity="center_horizontal"/>
+
+        <TextView
+            android:id="@+id/namePicturebook"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Picturebook name"
+            android:textColor="#6a1b76"
+            android:textStyle="bold" />
+        <RatingBar
+            android:id="@+id/ratingBar2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/Widget.AppCompat.RatingBar.Small"
+            android:progressTint="@color/titanum_yellow"/>
+
+        <TextView
+            android:id="@+id/ratingScore"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="4.3(100)"
+            android:textSize="12sp"/>
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/reviewRV"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        tools:listitem="@layout/row_review"/>
+
+
+
+
+</LinearLayout>

@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".admin.PendingSinglePicturebook">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_margin="10dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp">
+
+            <TextView
+                android:id="@+id/textViewTitleWordAdmin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:text="@string/title_single_picturebook"
+                android:textAllCaps="true"
+                android:textColor=" #6a1b76"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textViewTitleAdmin2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/textViewTitleWordAdmin"
+                android:padding="5dp" />
+
+
+            <TextView
+                android:id="@+id/textViewSummaryWordAdmin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/textViewTitleWordAdmin"
+                android:padding="5dp"
+                android:text="@string/summary_single_picturebook"
+                android:textAllCaps="true"
+                android:textColor=" #6a1b76"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textViewSummaryAdmin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textViewTitleAdmin2"
+                android:layout_toRightOf="@+id/textViewSummaryWordAdmin"
+                android:padding="5dp" />
+
+            <TextView
+                android:id="@+id/textViewStatusWordAdmin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textViewSummaryWordAdmin"
+                android:padding="5dp"
+                android:text="@string/author"
+                android:textAllCaps="true"
+                android:textColor=" #6a1b76"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textViewStatusAdmin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/textViewSummaryAdmin"
+                android:layout_toRightOf="@id/textViewStatusWordAdmin"
+                android:padding="5dp" />
+
+            <TextView
+                android:id="@+id/textStatusWordAdmin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textViewStatusWordAdmin"
+                android:padding="5dp"
+                android:text="@string/status"
+                android:textAllCaps="true"
+                android:textColor=" #6a1b76"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textViewStatusAdmin2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/textViewStatusAdmin"
+                android:layout_toRightOf="@id/textViewStatusWordAdmin"
+                android:padding="5dp" />
+
+            <Button
+                android:id="@+id/approveButton"
+                android:layout_width="@android:dimen/thumbnail_height"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/textViewStatusAdmin2"
+                android:fontFamily="@font/vast_shadow"
+                android:text="Approve"
+                android:textColor=" #6a1b76"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                app:backgroundTint="#fee157"
+                app:cornerRadius="10dp" />
+
+            <Button
+                android:id="@+id/rejectButton"
+                android:layout_width="@android:dimen/thumbnail_height"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/textViewStatusAdmin2"
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@id/approveButton"
+                android:fontFamily="@font/vast_shadow"
+                android:text="Reject"
+                android:textColor="#fee157"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                app:backgroundTint="#6a1b76"
+                app:cornerRadius="10dp" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:background="@color/purple_200"
+            android:adjustViewBounds="true"
+            android:layout_margin="10dp">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerViewPagesAdmin"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:adjustViewBounds="true"
+                android:scrollbars="horizontal"
+                tools:listitem="@layout/picturebook_row_item_explore" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</ScrollView>

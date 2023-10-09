@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "958835349333",
+    "firebase_url": "https://picture-book-rma2022-default-rtdb.europe-west1.firebasedatabase.app",
+    "project_id": "picture-book-rma2022",
+    "storage_bucket": "picture-book-rma2022.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:958835349333:android:3a8a331a9ffbed373f01dc",
+        "android_client_info": {
+          "package_name": "com.example.project"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "958835349333-opj64qj98q4v4pb0pmvvaii9mj5ne0ka.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCeKjvPXLJRvW_4RY0Q070IIYXMwH1A_nM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "958835349333-opj64qj98q4v4pb0pmvvaii9mj5ne0ka.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

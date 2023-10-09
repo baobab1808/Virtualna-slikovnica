@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".picturebook.NewPicturebook">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:padding="70dp">
+
+        <EditText
+            android:id="@+id/editTextTitle"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:inputType="textCapWords"
+            android:hint="@string/title"
+            android:autofillHints="@string/title"/>
+
+        <EditText
+            android:id="@+id/editTextSummary"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/editTextTitle"
+            android:layout_marginBottom="10dp"
+            android:autofillHints="@string/summary"
+            android:gravity="bottom"
+            android:hint="@string/summary"
+            android:inputType="textCapSentences"
+            android:minHeight="100dp" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerViewPages"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/editTextSummary"
+            android:scrollbars="horizontal"
+            tools:listitem="@layout/picturebook_row_item"/>
+
+        <Button
+            android:id="@+id/buttonAddPage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/recyclerViewPages"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/vast_shadow"
+            android:text="@string/add_page"
+            android:textColor="#fee157"
+            android:textStyle="bold"
+            app:backgroundTint="#b74bc2"
+            app:cornerRadius="10dp" />
+
+        <Button
+            android:id="@+id/buttonSavePicturebook"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/buttonAddPage"
+            android:fontFamily="@font/vast_shadow"
+            android:text="@string/save"
+            android:textColor="#6a1b76"
+            android:textStyle="bold"
+            app:backgroundTint="#fee157"
+            app:cornerRadius="10dp" />
+
+        <Button
+            android:id="@+id/buttonDiscardPicturebook"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/buttonSavePicturebook"
+            android:fontFamily="@font/vast_shadow"
+            android:text="@string/discard"
+            android:textColor="#fee157"
+            android:textStyle="bold"
+            app:backgroundTint="#BF0154"
+            app:cornerRadius="10dp" />
+
+        <Button
+            android:id="@+id/buttonEditPages"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/buttonSavePicturebook"
+            android:fontFamily="@font/vast_shadow"
+            android:text="@string/edit_pages"
+            android:textColor="#fee157"
+            android:textStyle="bold"
+            app:backgroundTint="#c788e1"
+            app:cornerRadius="10dp" />
+
+    </RelativeLayout>
+
+</ScrollView>

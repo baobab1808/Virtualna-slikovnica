@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:drawable="@color/violet"/>
+
+    <item android:drawable="@drawable/picturebook_logo2_recized"
+        android:gravity="center"
+        android:width="500dp"
+        android:height="500dp"/>
+</layer-list>

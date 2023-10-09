@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".explore.ExploreSinglePicturebook">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="10dp"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp">
+
+            <TextView
+                android:id="@+id/textViewTitleWord"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:text="@string/title_single_picturebook"
+                android:textAllCaps="true"
+                android:textColor=" #6a1b76"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textViewTitleExplore"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/textViewTitleWord"
+                android:padding="5dp" />
+
+            <RatingBar
+                android:id="@+id/ratingBar4"
+                style="@style/Widget.AppCompat.RatingBar.Small"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:numStars="5"
+                android:progressTint="@color/titanum_yellow" />
+
+            <TextView
+                android:id="@+id/textViewSummaryWord"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/textViewTitleWord"
+                android:padding="5dp"
+                android:text="@string/summary_single_picturebook"
+                android:textAllCaps="true"
+                android:textColor=" #6a1b76"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textViewSummaryExplore"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textViewTitleExplore"
+                android:layout_toRightOf="@+id/textViewSummaryWord"
+                android:padding="5dp" />
+
+            <TextView
+                android:id="@+id/textViewStatusWord"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textViewSummaryWord"
+                android:padding="5dp"
+                android:text="@string/author"
+                android:textAllCaps="true"
+                android:textColor=" #6a1b76"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textViewStatusExplore"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/textViewSummaryExplore"
+                android:layout_toRightOf="@id/textViewStatusWord"
+                android:padding="5dp" />
+
+            <Button
+                android:id="@+id/follow_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/textViewStatusExplore"
+                android:layout_alignParentRight="true"
+                android:fontFamily="@font/vast_shadow"
+                android:padding="10dp"
+                android:text="@string/follow"
+                android:textColor="#fee157"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:backgroundTint="#c788e1"
+                app:cornerRadius="10dp" />
+
+        </RelativeLayout>
+
+        <RelativeLayout xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:adjustViewBounds="true"
+            android:background="@color/purple_200"
+            android:gravity="center">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerViewPagesExplore"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:adjustViewBounds="true"
+                android:scrollbars="horizontal"
+                tools:listitem="@layout/picturebook_row_item_explore" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp">
+
+            <ImageButton
+                android:id="@+id/addReviews"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_gravity="right"
+                android:layout_marginLeft="10dp"
+                android:background="@null"
+                android:clickable="true"
+                android:src="@drawable/comment" />
+
+            <ImageButton
+                android:id="@+id/reviewBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:background="@android:color/transparent"
+                android:src="@drawable/reviews" />
+        </RelativeLayout>
+    </LinearLayout>
+
+</ScrollView>

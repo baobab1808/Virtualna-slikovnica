@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.project">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/splashScreenTheme">
+        <activity
+            android:name=".notificationsettings.NotificationSettings"
+            android:exported="false"
+            android:parentActivityName=".MainMenu">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.project.MainMenu" />
+        </activity>
+        <activity
+            android:name=".admin.PendingSinglePicturebook"
+            android:exported="false"
+            android:parentActivityName=".admin.PendingPicturebooks">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.project.admin.PendingPicturebooks" />
+        </activity>
+        <activity
+            android:name=".admin.PendingPicturebooks"
+            android:exported="false"
+            android:parentActivityName=".MainMenu">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.project.MainMenu" />
+        </activity>
+        <activity
+            android:name=".showreviews.ShowReviews"
+            android:exported="false"
+            android:parentActivityName=".explore.ExploreSinglePicturebook">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.project.explore.ExploreSinglePicturebook" />
+        </activity>
+        <activity
+            android:name=".review.WriteReview"
+            android:exported="false"
+            android:parentActivityName=".explore.ExploreSinglePicturebook">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.project.explore.ExploreSinglePicturebook" />
+        </activity>
+        <activity
+            android:name=".archive.EditPages"
+            android:parentActivityName=".archive.SinglePicturebook">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.project.archive.SinglePicturebook" />
+        </activity>
+        <activity
+            android:name=".explore.ExploreSinglePicturebook"
+            android:exported="false"
+            android:launchMode="singleTask"
+            android:parentActivityName=".explore.Explore">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.project.explore.Explore" />
+        </activity>
+        <activity
+            android:name=".explore.Explore"
+            android:exported="false"
+            android:parentActivityName=".MainMenu">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.project.MainMenu" />
+        </activity>
+        <activity
+            android:name=".archive.SinglePicturebook"
+            android:launchMode="singleTask"
+            android:parentActivityName=".archive.MyArchive">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.project.archive.MyArchive" />
+        </activity>
+        <activity
+            android:name=".archive.MyArchive"
+            android:parentActivityName=".MainMenu">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.project.MainMenu" />
+        </activity>
+        <activity
+            android:name=".editpage.NewPage"
+            android:exported="false"
+            android:parentActivityName=".MainMenu">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.project.MainMenu" />
+        </activity>
+        <activity
+            android:name=".picturebook.NewPicturebook"
+            android:parentActivityName=".MainMenu">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.project.MainMenu" />
+        </activity>
+        <activity
+            android:name=".user_profile.ChangeProfilePicture"
+            android:parentActivityName=".user_profile.Settings">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.project.user_profile.Settings" />
+        </activity>
+        <activity
+            android:name=".user_profile.ChangePassword"
+            android:parentActivityName=".user_profile.Settings">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.project.user_profile.Settings" />
+        </activity>
+        <activity
+            android:name=".user_profile.Settings"
+            android:parentActivityName=".MainMenu">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.project.MainMenu" />
+        </activity>
+        <activity android:name=".user_profile.PasswordReset" />
+        <activity android:name=".MainMenu" />
+        <activity android:name=".user_profile.Register" />
+        <activity android:name=".user_profile.Login"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <service
+            android:name=".firebasemessaging.MyFirebaseMessaging">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT"/>
+            </intent-filter>
+        </service>
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+    </application>
+
+</manifest>

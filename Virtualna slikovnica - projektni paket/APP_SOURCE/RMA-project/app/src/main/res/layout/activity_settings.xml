@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".user_profile.Settings">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:padding="70dp">
+
+        <ImageView
+            android:id="@+id/imageButtonProfileInfo"
+            android:layout_width="78dp"
+            android:layout_height="83dp"
+            android:clickable="true"
+            android:foreground="@drawable/rounded_frame" />
+
+        <ImageView
+            android:id="@+id/imageButtonEditInfo"
+            android:layout_width="20dp"
+            android:layout_height="83dp"
+            android:clickable="true"
+            android:layout_below="@+id/imageButtonProfileInfo"
+            android:src="@drawable/edit"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            />
+
+        <RelativeLayout
+            android:id="@+id/relativeLayoutEdit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/imageButtonEditInfo"
+            android:layout_margin="10dp">
+
+            <RelativeLayout
+                android:id="@+id/rlEmail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp">
+
+                <TextView
+                    android:id="@+id/textViewEmailWord"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/e_mail_word"
+                    android:textAllCaps="true"
+                    android:textColor=" #6a1b76"
+                    android:textSize="20dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/textViewEmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textSize="20dp"
+                    android:layout_below="@+id/textViewEmailWord"/>
+
+                <EditText
+                    android:id="@+id/editTextEmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:inputType="textEmailAddress"
+                    android:layout_below="@+id/textViewEmailWord"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rlFirstName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rlEmail"
+                android:layout_marginTop="10dp">
+
+                <TextView
+                    android:id="@+id/textViewFirstNameWord"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/first_name_word"
+                    android:textAllCaps="true"
+                    android:textColor=" #6a1b76"
+                    android:textSize="20dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/textViewFirstName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textSize="20dp"
+                    android:layout_below="@+id/textViewFirstNameWord" />
+
+                <EditText
+                    android:id="@+id/editTextFirstName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:inputType="textCapWords"
+                    android:layout_below="@+id/textViewFirstNameWord"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rlLastName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/rlFirstName"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp">
+
+                <TextView
+                    android:id="@+id/textViewLastNameWord"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/last_name_word"
+                    android:textAllCaps="true"
+                    android:textColor=" #6a1b76"
+                    android:textSize="20dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/textViewLastName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textSize="20dp"
+                    android:layout_below="@+id/textViewLastNameWord"/>
+
+                <EditText
+                    android:id="@+id/editTextLastName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:inputType="textCapWords"
+                    android:layout_below="@+id/textViewLastNameWord"/>
+
+            </RelativeLayout>
+
+            <Button
+                android:id="@+id/buttonSaveEdited"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/rlLastName"
+                android:fontFamily="@font/vast_shadow"
+                android:text="@string/save"
+                android:textColor=" #6a1b76"
+                android:textStyle="bold"
+                app:backgroundTint="#fee157"
+                app:cornerRadius="10dp" />
+
+            <Button
+                android:id="@+id/buttonCancelEdited"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/rlLastName"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@+id/buttonSaveEdited"
+                android:fontFamily="@font/vast_shadow"
+                android:text="Cancel"
+                android:textColor="#fee157"
+                android:textStyle="bold"
+                app:backgroundTint="#b74bc2"
+                app:cornerRadius="10dp" />
+
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/buttonChangePassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/relativeLayoutEdit"
+            android:fontFamily="@font/vast_shadow"
+            android:text="@string/change_password"
+            android:textColor="#fee157"
+            android:textStyle="bold"
+            app:backgroundTint="#c788e1"
+            app:cornerRadius="10dp" />
+
+        <Button
+            android:id="@+id/buttonDeleteAccount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/buttonChangePassword"
+            android:fontFamily="@font/vast_shadow"
+            android:text="@string/delete_account"
+            android:textColor="#fee157"
+            android:textStyle="bold"
+            app:backgroundTint="#BF0154"
+            app:cornerRadius="10dp" />
+
+        <Button
+            android:id="@+id/buttonSignOut"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/buttonDeleteAccount"
+            android:fontFamily="@font/vast_shadow"
+            android:text="@string/sign_out"
+            android:textColor="#fee157"
+            android:textStyle="bold"
+            app:backgroundTint="#6a1b76"
+            app:cornerRadius="10dp" />
+
+    </RelativeLayout>
+
+</ScrollView>

@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".archive.SinglePicturebook">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:padding="70dp"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/imageButtonEditPicturebook"
+                android:layout_width="20dp"
+                android:layout_height="83dp"
+                android:clickable="true"
+                android:src="@drawable/edit"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentRight="true"
+                />
+
+            <TextView
+                android:id="@+id/textViewTitleWord"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/imageButtonEditPicturebook"
+                android:padding="5dp"
+                android:text="@string/title_single_picturebook"
+                android:textAllCaps="true"
+                android:textColor=" #6a1b76"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textViewTitleArchive"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/imageButtonEditPicturebook"
+                android:layout_toRightOf="@id/textViewTitleWord"
+                android:padding="5dp"/>
+
+            <TextView
+                android:id="@+id/textViewSummaryWord"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/textViewTitleWord"
+                android:padding="5dp"
+                android:text="@string/summary_single_picturebook"
+                android:textAllCaps="true"
+                android:textColor=" #6a1b76"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textViewSummaryArchive"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textViewTitleArchive"
+                android:layout_toRightOf="@+id/textViewSummaryWord"
+                android:padding="5dp"/>
+
+            <TextView
+                android:id="@+id/textViewStatusWord"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textViewSummaryWord"
+                android:padding="5dp"
+                android:text="@string/status"
+                android:textAllCaps="true"
+                android:textColor=" #6a1b76"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textViewStatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/textViewSummaryArchive"
+                android:layout_toRightOf="@id/textViewStatusWord"
+                android:padding="5dp"/>
+
+            <Button
+                android:id="@+id/buttonPublish"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textViewStatusWord"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginBottom="10dp"
+                android:fontFamily="@font/vast_shadow"
+                android:padding="5dp"
+                android:text="@string/publish"
+                android:textColor="#fee157"
+                app:backgroundTint="#b74bc2"
+                app:cornerRadius="10dp" />
+
+            <Button
+                android:id="@+id/buttonPrivate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textViewStatusWord"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginBottom="10dp"
+                android:fontFamily="@font/vast_shadow"
+                android:padding="5dp"
+                android:text="@string/make_private"
+                android:textColor="#fee157"
+                app:backgroundTint="#c788e1"
+                app:cornerRadius="10dp" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerViewPagesArchive"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scrollbars="horizontal"
+                tools:listitem="@layout/picturebook_row_item"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/buttonDeletePicturebook"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:fontFamily="@font/vast_shadow"
+                android:padding="5dp"
+                android:text="@string/delete_picture_book"
+                android:textColor="#fee157"
+                app:backgroundTint="#BF0154"
+                app:cornerRadius="10dp" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</ScrollView>
